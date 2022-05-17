@@ -12,7 +12,8 @@ async function main() {
 
   setTimeout(async () => {
     const password = await client.$("id:com.rgnet.rgnet1:id/etPassword");
-    await password.setValue("botxyz321  @Realgaming.com");
+    await password.waitForDisplayed({ timeout: 5000 });
+    await password.setValue("botxyz431@Realgaming.com");
 
     // login to the system
     // const login_btn = await client.$("id:com.rgnet.rgnet1:id/btnLogin")
@@ -22,9 +23,8 @@ async function main() {
     await signup_btn.click();
 
     const emailAddress = await client.$("id:com.rgnet.rgnet1:id/etEmail");
-    await emailAddress.setValue("botxyz321@Realgaming.com");
-
-    const value = await emailAddress.getText();
+    await emailAddress.waitForDisplayed({ timeout: 5000 });
+    await emailAddress.setValue("botxyz431@Realgaming.com");
 
     const btn_continue = await client.$("id:com.rgnet.rgnet1:id/btnContinue");
     await btn_continue.click();
@@ -33,16 +33,16 @@ async function main() {
       // second page
       const userName = await client.$("id:com.rgnet.rgnet1:id/etUserName");
       await userName.waitForDisplayed({ timeout: 500000 });
-      await userName.setValue("botxyz321");
+      await userName.setValue("botxyz431");
 
       // password
       const etPassword = await client.$("id:com.rgnet.rgnet1:id/etPassword");
-      await etPassword.setValue("botxyz321@Realgaming.com.yon21");
+      await etPassword.setValue("botxyz431@Realgaming.com.yon21");
 
       const etConfirmPassword = await client.$(
         "id:com.rgnet.rgnet1:id/etConfirmPassword"
       );
-      await etConfirmPassword.setValue("botxyz321@Realgaming.com.yon21");
+      await etConfirmPassword.setValue("botxyz431@Realgaming.com.yon21");
 
       //phone number
       const phone_number_edt = await client.$(
@@ -117,7 +117,7 @@ async function main() {
           await etSocial2.setValue("55");
 
           const etSocial3 = await client.$("id:com.rgnet.rgnet1:id/etSocial3");
-          await etSocial3.setValue("3334");
+          await etSocial3.setValue("5544");
 
           // const text1 = await client.$("id:android:id/text1");
           // await text1.setValue("United States");
