@@ -7,7 +7,10 @@ async function main() {
 
   setTimeout(async () => {
     const btnOk = await client.$("id:com.rgnet.rgnet1:id/btnOk");
-    await btnOk.click();
+    const isDisplayed = await btnOk.isDisplayed();
+    if (isDisplayed) {
+      await btnOk.click();
+    }
 
     setTimeout(async () => {
       const emailAddress = await client.$("id:com.rgnet.rgnet1:id/etEmail");
@@ -21,8 +24,8 @@ async function main() {
 
       setTimeout(() => {
         console.log("Login Hasbeen Started...");
-      }, 100000);
-    }, 6000);
+      }, 1000);
+    }, 2000);
   }, 2000);
 }
 main();
