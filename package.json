@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -15,10 +15,21 @@
     "@wdio/mocha-framework": "^7.19.7",
     "@wdio/spec-reporter": "^7.19.7",
     "chromedriver": "^101.0.0",
+    "npm-bundle": "^3.0.3",
     "wdio-chromedriver-service": "^7.3.2",
     "webdriverio": "^7.19.7"
   },
   "dependencies": {
+    "@wdio/appium-service": "^7.19.5",
+    "@wdio/selenium-standalone-service": "^7.19.5",
+    "chai": "^4.3.6",
     "mocha": "^10.0.0"
-  }
+  },
+  "bundledDependencies": [
+    "@wdio/appium-service",
+    "@wdio/selenium-standalone-service",
+    "chai",
+    "mocha"
+  ]
 }
+
